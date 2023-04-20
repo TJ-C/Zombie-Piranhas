@@ -81,6 +81,10 @@ class GameScene: SKScene {
   // Scaling for macOS
   var sceneContentScale: CGFloat = 1.0
   
+  // Challenge
+  var boatDirectionToTheRight = true
+  var rotate = SKAction.scaleX(to: -1, duration: 2)
+  
   override func didMove(to view: SKView) {
     setupScene()
   }
@@ -479,6 +483,36 @@ class GameScene: SKScene {
     view?.presentScene(newScene!, transition: reveal)
   }
   
+  // Challenge
+  #if os(macOS)
+  /// Updates the boat's direction after the boat comes near to the edge of the screen.
+  /// - Parameter boat: the fishing boat
+  func updateBoat(boat: SKSpriteNode) {
+    var boat = boat
+    if gameState == .readyToCast {
+      let speed = boat.userData?["speed"] as! CGFloat
+      let xDelta: CGFloat = (size.width * 0.5) + (boat as! SKSpriteNode).size.width
+
+      if boatDirectionToTheRight {
+        boat.position = CGPoint(x: boat.position.x + speed, y: boat.position.y)
+        if boat.position.x > xDelta - (boat.frame.width * 2) {
+          // spin boat to the left
+          boatDirectionToTheRight = false
+//          boat.xScale = boat.xScale * -1
+          boat.run(SKAction.scaleX(to: boat.xScale * -1, duration: 1))
+        }
+      } else { // going left
+        boat.position = CGPoint(x: boat.position.x - speed, y: boat.position.y)
+        if boat.position.x < -(xDelta - (boat.frame.width * 2)) {
+          // spin boat to the right
+          boatDirectionToTheRight = true
+          boat.run(SKAction.scaleX(to: boat.xScale * -1, duration: 1))
+        }
+      }
+    }
+  }
+  #endif
+  
   // MARK: - Events
  
   #if os(iOS)
@@ -575,6 +609,13 @@ class GameScene: SKScene {
         resetHook()
       }
     }
+    
+    // Challenge
+    // Update boat
+//    enumerateChildNodes(withName: "boat") { (node, stop) in
+//      self.updateBoat(boat: node)
+//    }
+    updateBoat(boat: boatSprite!)
     
   }
   
