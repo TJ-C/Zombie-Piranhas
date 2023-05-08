@@ -487,12 +487,10 @@ class GameScene: SKScene {
   #if os(macOS)
   /// Updates the boat's direction after the boat comes near to the edge of the screen.
   /// - Parameter boat: the fishing boat
-  func updateBoat(boat: SKSpriteNode) {
-    var boat = boat
+  func updateBoat(boat: SKNode) {
     if gameState == .readyToCast {
       let speed = boat.userData?["speed"] as! CGFloat
       let xDelta: CGFloat = (size.width * 0.5) + (boat as! SKSpriteNode).size.width
-
       if boatDirectionToTheRight {
         boat.position = CGPoint(x: boat.position.x + speed, y: boat.position.y)
         if boat.position.x > xDelta - (boat.frame.width * 2) {
@@ -612,10 +610,10 @@ class GameScene: SKScene {
     
     // Challenge
     // Update boat
-//    enumerateChildNodes(withName: "boat") { (node, stop) in
-//      self.updateBoat(boat: node)
-//    }
-    updateBoat(boat: boatSprite!)
+    enumerateChildNodes(withName: "boat") { (node, stop) in
+      self.updateBoat(boat: node)
+    }
+//    updateBoat(boat: boatSprite!)
     
   }
   
