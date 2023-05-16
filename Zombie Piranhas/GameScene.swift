@@ -29,6 +29,11 @@
  */
 
 import SpriteKit
+import GameController
+
+protocol ReactToMotionEvents {
+  func motionUpdate(_ motion: GCMotion) -> Void
+}
 
 // States
 enum GameState: Int {
@@ -85,8 +90,20 @@ class GameScene: SKScene {
   var boatDirectionToTheRight = true
   var rotate = SKAction.scaleX(to: -1, duration: 2)
   
+  // Controllers
+  var curController: GCController?
+  var motionSupported: Bool = false
+  var motionDelegate: ReactToMotionEvents? = nil
+  
+  func gcAccelerationToDouble3(_ acceleration: GCAcceleration) -> simd_double3 {
+      return simd_make_double3(acceleration.x, acceleration.y, acceleration.z)
+  }
+  
   override func didMove(to view: SKView) {
     setupScene()
+    setupControllerObservers()
+    connectControllers()
+    
   }
   
   func setupScene() {
@@ -115,6 +132,33 @@ class GameScene: SKScene {
     scoreLabel!.position.y = scoreLabel!.position.y * labelYScaleFactor
     livesLabel!.position.y = livesLabel!.position.y * labelYScaleFactor
     sceneContentScale = 0.5
+    #endif
+    
+    #if os(tvOS)
+    let labelYScaleFactor: CGFloat = 0.85
+    let labelXScaleFactor: CGFloat = 0.92
+        
+    statusLabel!.position.y =
+      statusLabel!.position.y * labelYScaleFactor
+    scoreLabel!.position.y =
+      scoreLabel!.position.y * labelYScaleFactor
+    livesLabel!.position.y =
+      livesLabel!.position.y * labelYScaleFactor
+        
+    scoreLabel!.position.x =
+      scoreLabel!.position.x * labelXScaleFactor
+    livesLabel!.position.x =
+      livesLabel!.position.x * labelXScaleFactor
+        
+    sceneContentScale = 0.5
+    
+//    let tapRecognizer = UITapGestureRecognizer(target: self,
+//                                               action: #selector(remoteTapped(_:)))
+//    tapRecognizer.allowedPressTypes = [NSNumber(value: UIPress.PressType.select.rawValue), NSNumber(value: UIPress.PressType.downArrow.rawValue)]
+//
+//    view!.addGestureRecognizer(tapRecognizer)
+//    let appDelegate = UIApplication.shared.delegate as! GameScene
+//    appDelegate.motionDelegate = self
     #endif
     
     boatSprite!.setScale(sceneContentScale)
@@ -152,7 +196,7 @@ class GameScene: SKScene {
       
       #if os(iOS)
       let hookDepth = CGFloat(3600.0)
-      #elseif os(macOS)
+      #elseif os(macOS) || os(tvOS)
       let hookDepth = CGFloat(7000)
       #endif
       let hookVelocity = Double(hookDepth / 500)
@@ -484,7 +528,7 @@ class GameScene: SKScene {
   }
   
   // Challenge
-  #if os(macOS)
+  #if os(macOS) || os(tvOS)
   /// Updates the boat's direction after the boat comes near to the edge of the screen.
   /// - Parameter boat: the fishing boat
   func updateBoat(boat: SKNode) {
@@ -519,6 +563,8 @@ class GameScene: SKScene {
     handlePlayerAction(at: touchLocation!)
   }
   #endif
+  
+  
   
   func handlePlayerAction(at location: CGPoint) {
     switch gameState {
@@ -569,7 +615,7 @@ class GameScene: SKScene {
     let hookPosition = convert((hook?.position)!, from: line!)
     #if os(iOS)
     let maxCameraDepth: CGFloat = -1545
-    #elseif os(macOS)
+    #elseif os(macOS) || os(tvOS)
     let maxCameraDepth: CGFloat = -1800
     #endif
     if hookPosition.y < (boatSprite?.position.y)! && hookPosition.y > maxCameraDepth {
@@ -610,11 +656,36 @@ class GameScene: SKScene {
     
     // Challenge
     // Update boat
+    #if os(macOS) || os(tvOS)
     enumerateChildNodes(withName: "boat") { (node, stop) in
       self.updateBoat(boat: node)
     }
+    #endif
 //    updateBoat(boat: boatSprite!)
+    if curController != GCController.current {
+      if let motion = curController?.motion {
+        print("Stop detecting casting")
+        stopCastingDetection(motion)
+      }
+      
+      curController = GCController.current
+      // For some reasin this is not supported in tvOS
+      if let motion = curController?.motion {
+        print("Start detecting casting")
+        motionDelegate = self
+        curController?.motion?.valueChangedHandler = { motion in
+          self.motionDelegate?.motionUpdate(motion)
+        }
+        startCastingDetection(motion)
+      }
+//      if curController == GCController.current {
+//        print("Has attitude: \(curController!.motion!.hasAttitude) Has rotation rate: \(curController!.motion!.hasRotationRate) Has Gravity and User accelleration: \(curController!.motion!.hasGravityAndUserAcceleration) Acceleration: \(curController!.motion!.acceleration)")
+//      }
+    }
     
+//    if let motion = curController?.motion {
+//      print("Updating motion \(motion.userAcceleration.y)")
+//    }
   }
   
 }
@@ -641,6 +712,43 @@ extension GameScene {
       bashFish()
     } else {
       super.keyDown(with: event)
+    }
+  }
+}
+#endif
+
+#if os(tvOS) || os(macOS)
+// tvOS Events
+extension GameScene: ReactToMotionEvents {
+  
+  func stopCastingDetection(_ motion: GCMotion) {
+    motion.sensorsActive = false
+  }
+  
+  func startCastingDetection(_ motion: GCMotion) {
+    print("Start casting detection...")
+    motion.sensorsActive = true
+  }
+
+  func motionUpdate(_ motion: GCMotion) {
+    let acceleration = gcAccelerationToDouble3(motion.acceleration)
+    print(acceleration.y)
+    if acceleration.y > 3 {
+      if gameState == .reelingIn {
+        bashFish()
+      } else {
+        goFish()
+      }
+    }
+  }
+  
+  func goFish() {
+    if gameState == .readyToCast {
+      castLine()
+    } else if gameState == .casting {
+      stopHook()
+    } else if gameState == .gameOver {
+      resetGame()
     }
   }
 }
