@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "ZP_tvOS_top_shelf.png",
       "idiom" : "tv",
       "scale" : "1x"
     },

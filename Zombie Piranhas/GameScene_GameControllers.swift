@@ -71,14 +71,9 @@ extension GameScene {
           }
         } else if (gamepad.dpad == element) {
           if (gamepad.dpad.right.isPressed == true){
-            print("pressed dpad right")
-          } else if (gamepad.dpad.right.isPressed == false){
-            print("let go of dpad right")
-          }
-          if (gamepad.dpad.left.isPressed == true){
-            print("pressed dpad left")
-          } else if (gamepad.dpad.left.isPressed == false){
-            print("let go of dpad left")
+            self.boatDirection("Right")
+          } else if gamepad.dpad.left.isPressed == true {
+            self.boatDirection("Left")
           }
         } else if (gamepad.leftShoulder == element){
           if ( gamepad.leftShoulder.isPressed == true){

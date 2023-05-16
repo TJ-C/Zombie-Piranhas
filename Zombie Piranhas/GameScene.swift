@@ -669,7 +669,7 @@ class GameScene: SKScene {
       }
       
       curController = GCController.current
-      // For some reasin this is not supported in tvOS
+      // For some reason this is not supported in tvOS
       if let motion = curController?.motion {
         print("Start detecting casting")
         motionDelegate = self
@@ -678,14 +678,7 @@ class GameScene: SKScene {
         }
         startCastingDetection(motion)
       }
-//      if curController == GCController.current {
-//        print("Has attitude: \(curController!.motion!.hasAttitude) Has rotation rate: \(curController!.motion!.hasRotationRate) Has Gravity and User accelleration: \(curController!.motion!.hasGravityAndUserAcceleration) Acceleration: \(curController!.motion!.acceleration)")
-//      }
     }
-    
-//    if let motion = curController?.motion {
-//      print("Updating motion \(motion.userAcceleration.y)")
-//    }
   }
   
 }
@@ -729,10 +722,26 @@ extension GameScene: ReactToMotionEvents {
     print("Start casting detection...")
     motion.sensorsActive = true
   }
+  
+  /// When the D-pad left or right buttons are pressed, the boat is rotated to that direction
+  /// - Parameter direction: A string describing the direction
+  func boatDirection(_ direction: String) {
+    if gameState == .readyToCast {
+      if direction == "Right" {
+        if boatSprite!.xScale < 0.0 {
+          // flip  boat right
+          boatSprite?.run(SKAction.scaleX(to: sceneContentScale, duration: 0.5))
+          boatDirectionToTheRight = true
+        }
+      } else if direction == "Left" {
+        boatSprite?.run(SKAction.scaleX(to: -sceneContentScale, duration: 0.5))
+        boatDirectionToTheRight = false
+      }
+    }
+  }
 
   func motionUpdate(_ motion: GCMotion) {
     let acceleration = gcAccelerationToDouble3(motion.acceleration)
-    print(acceleration.y)
     if acceleration.y > 3 {
       if gameState == .reelingIn {
         bashFish()
@@ -741,6 +750,7 @@ extension GameScene: ReactToMotionEvents {
       }
     }
   }
+
   
   func goFish() {
     if gameState == .readyToCast {
