@@ -29,11 +29,18 @@
  */
 
 import SpriteKit
+#if os(macOS) || os(tvOS)
 import GameController
+#endif
+#if os(watchOS)
+import WatchConnectivity
+#endif
 
+#if os(macOS) || os(tvOS)
 protocol ReactToMotionEvents {
   func motionUpdate(_ motion: GCMotion) -> Void
 }
+#endif
 
 // States
 enum GameState: Int {
@@ -89,7 +96,8 @@ class GameScene: SKScene {
   // Challenge
   var boatDirectionToTheRight = true
   var rotate = SKAction.scaleX(to: -1, duration: 2)
-  
+ 
+  #if os(macOS) || os(tvOS)
   // Controllers
   var curController: GCController?
   var motionSupported: Bool = false
@@ -98,13 +106,17 @@ class GameScene: SKScene {
   func gcAccelerationToDouble3(_ acceleration: GCAcceleration) -> simd_double3 {
       return simd_make_double3(acceleration.x, acceleration.y, acceleration.z)
   }
+  #endif
   
+  #if !os(watchOS)
   override func didMove(to view: SKView) {
     setupScene()
+    #if os(macOS) || os(tvOS)
     setupControllerObservers()
     connectControllers()
-    
+    #endif
   }
+  #endif
   
   func setupScene() {
     // Set up camera
@@ -198,6 +210,8 @@ class GameScene: SKScene {
       let hookDepth = CGFloat(3600.0)
       #elseif os(macOS) || os(tvOS)
       let hookDepth = CGFloat(7000)
+      #elseif os(watchOS)
+      let hookDepth = CGFloat(1350)
       #endif
       let hookVelocity = Double(hookDepth / 500)
       
@@ -224,7 +238,11 @@ class GameScene: SKScene {
     if gameState == .fishing {
       gameState = .reelingIn
       
+      #if os(watchOS)
+      let targetDepth = CGFloat(50.0)
+      #else
       let targetDepth = CGFloat(100.0)
+      #endif
       let currentDepth = line!.size.height
       let hookVelocity = Double(currentDepth / 500)
       
@@ -306,7 +324,12 @@ class GameScene: SKScene {
         fishSprite.userData?["life"] = fishLife * fishScale
 
         let xDelta: CGFloat = (size.width * 0.5) + (fishSprite.size.width / 2.0)
+        
+        #if os(watchOS)
+        let fishY = CGFloat.random(min: -700, max: 515)
+        #else
         let fishY = CGFloat.random(min: -1900.0, max: 1450.0)
+        #endif
         
         var fishX = -xDelta
         if CGFloat.random(min: 0.0, max: 100.0) <= 50.0 {
@@ -329,12 +352,19 @@ class GameScene: SKScene {
   }
   
   func updateFish(fish: SKNode) {
+    
+    #if os(watchOS)
+    let hookRadius: CGFloat = 50
+    let offset = CGPoint(x: 6, y: 30)
+    #else
     let hookRadius:CGFloat = 100
+    let offset = CGPoint(x: 12, y: 60)
+    #endif
     
     // Check if fish is near hook.
     let hookPosition = convert((hook?.position)!, from: line!)
     // Take into account the hooks anchorPoint.
-    let convertedHookPosition = CGPoint(x: hookPosition.x - 12.0, y: hookPosition.y - 60.0)
+    let convertedHookPosition = CGPoint(x: hookPosition.x - offset.x, y: hookPosition.y - offset.y)
     
     if gameState == .fishing && fishCaught == nil {
       if fish.userData?["caught"] as! Bool == false {
@@ -399,8 +429,13 @@ class GameScene: SKScene {
     fishCaught = fish.copy() as! SKSpriteNode
     fish.removeFromParent()
     fishCaught?.setScale(fish.userData?["fishScale"] as! CGFloat)
-    
+
+    #if os(watchOS)
+    fishCaught!.position = CGPoint(x: -6, y: -30)
+    #else
     fishCaught!.position = CGPoint(x: -12.0, y: -60.0)
+    #endif
+    
     fishCaught!.zRotation = CGFloat(90.0).degreesToRadians()
     fishCaught!.zPosition = fishCaught!.zPosition + 1
     
@@ -521,10 +556,14 @@ class GameScene: SKScene {
   }
   
   func resetGame() {
+    #if os(watchOS)
+    NotificationCenter.default.post(name: NSNotification.Name("Reload"), object: self)
+    #else
     let newScene = GameScene(fileNamed:"GameScene")
     newScene!.scaleMode = .aspectFill
     let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
     view?.presentScene(newScene!, transition: reveal)
+    #endif
   }
   
   // Challenge
@@ -617,6 +656,8 @@ class GameScene: SKScene {
     let maxCameraDepth: CGFloat = -1545
     #elseif os(macOS) || os(tvOS)
     let maxCameraDepth: CGFloat = -1800
+    #elseif os(watchOS)
+    let maxCameraDepth: CGFloat = -600
     #endif
     if hookPosition.y < (boatSprite?.position.y)! && hookPosition.y > maxCameraDepth {
       camera?.position = CGPoint(x: 0.0, y: hookPosition.y)
@@ -660,7 +701,7 @@ class GameScene: SKScene {
     enumerateChildNodes(withName: "boat") { (node, stop) in
       self.updateBoat(boat: node)
     }
-    #endif
+    
 //    updateBoat(boat: boatSprite!)
     if curController != GCController.current {
       if let motion = curController?.motion {
@@ -679,6 +720,7 @@ class GameScene: SKScene {
         startCastingDetection(motion)
       }
     }
+    #endif
   }
   
 }

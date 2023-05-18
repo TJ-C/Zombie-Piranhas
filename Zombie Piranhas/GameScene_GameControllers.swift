@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 import GameController
-
+#if os(tvOS) || os(macOS)
 extension GameScene {
   
   func setupControllerObservers() {
@@ -132,7 +132,6 @@ extension GameScene {
       }
     }
     
-    
 #if os(tvOS)
     func setupMicroController(_ controller: GCController) {
       print("Setting up micro controller aka tv remote.")
@@ -173,3 +172,4 @@ extension GameScene {
 #endif
   }
 }
+#endif

@@ -83,6 +83,37 @@
 		3ABC46152A0D0E9A0004B5E5 /* GameScene_GameControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABC46142A0D0E9A0004B5E5 /* GameScene_GameControllers.swift */; };
 		3ABC46162A0D0E9A0004B5E5 /* GameScene_GameControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABC46142A0D0E9A0004B5E5 /* GameScene_GameControllers.swift */; };
 		3ABC46172A0D0E9A0004B5E5 /* GameScene_GameControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABC46142A0D0E9A0004B5E5 /* GameScene_GameControllers.swift */; };
+		3AD820382A1651C700C61D58 /* Zombie Piranhas watchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3AD820372A1651C700C61D58 /* Zombie Piranhas watchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3AD8203D2A1651C700C61D58 /* Zombie_Piranhas_watchOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD8203C2A1651C700C61D58 /* Zombie_Piranhas_watchOSApp.swift */; };
+		3AD8203F2A1651C700C61D58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD8203E2A1651C700C61D58 /* ContentView.swift */; };
+		3AD820412A1651C800C61D58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD820402A1651C800C61D58 /* Assets.xcassets */; };
+		3AD820442A1651C800C61D58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD820432A1651C800C61D58 /* Preview Assets.xcassets */; };
+		3AD8204E2A1655B500C61D58 /* Splash.sks in Resources */ = {isa = PBXBuildFile; fileRef = F57E6CC61D3D4D8F00827D9A /* Splash.sks */; };
+		3AD820502A1655CD00C61D58 /* Fish Bash Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07DC1F747A1E00A5D3FB /* Fish Bash Sound.mp3 */; };
+		3AD820512A1655CD00C61D58 /* Fishing Ambience Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07DD1F747A1F00A5D3FB /* Fishing Ambience Sound.mp3 */; };
+		3AD820522A1655CD00C61D58 /* Yum Fish Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07DF1F747A1F00A5D3FB /* Yum Fish Sound.mp3 */; };
+		3AD820532A1655CD00C61D58 /* Fish Caught.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07D71F747A1D00A5D3FB /* Fish Caught.mp3 */; };
+		3AD820542A1655CD00C61D58 /* Reel Tick Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07DE1F747A1F00A5D3FB /* Reel Tick Sound.mp3 */; };
+		3AD820552A1655CD00C61D58 /* Zombie Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07D81F747A1D00A5D3FB /* Zombie Sound.mp3 */; };
+		3AD820562A1655CD00C61D58 /* Reel Start Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07DB1F747A1E00A5D3FB /* Reel Start Sound.mp3 */; };
+		3AD820572A1655CD00C61D58 /* Fish Off Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07DA1F747A1E00A5D3FB /* Fish Off Sound.mp3 */; };
+		3AD820582A1655CD00C61D58 /* Game Over Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07D91F747A1D00A5D3FB /* Game Over Sound.mp3 */; };
+		3AD820592A1655DD00C61D58 /* SKTEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86805129EEC2BC007AA0FC /* SKTEffects.swift */; };
+		3AD8205B2A1655DD00C61D58 /* SKAction+SpecialEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86804E29EEC2BC007AA0FC /* SKAction+SpecialEffects.swift */; };
+		3AD8205C2A1655DD00C61D58 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86805029EEC2BC007AA0FC /* CGPoint+Extensions.swift */; };
+		3AD8205D2A1655DD00C61D58 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86805429EEC2BC007AA0FC /* CGFloat+Extensions.swift */; };
+		3AD8205E2A1655DD00C61D58 /* SKColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86804929EEC2BC007AA0FC /* SKColor+Extensions.swift */; };
+		3AD8205F2A1655DD00C61D58 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86804A29EEC2BC007AA0FC /* CGVector+Extensions.swift */; };
+		3AD820602A1655DD00C61D58 /* SKTTimingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86804C29EEC2BC007AA0FC /* SKTTimingFunctions.swift */; };
+		3AD820612A1655DD00C61D58 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86805329EEC2BC007AA0FC /* Vector3.swift */; };
+		3AD820622A1655DD00C61D58 /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86804F29EEC2BC007AA0FC /* SKNode+Extensions.swift */; };
+		3AD820632A1655DD00C61D58 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86804B29EEC2BC007AA0FC /* Int+Extensions.swift */; };
+		3AD820642A1655DD00C61D58 /* SKAction+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86804D29EEC2BC007AA0FC /* SKAction+Extensions.swift */; };
+		3AD820662A16566A00C61D58 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3AD820652A16566A00C61D58 /* GameScene.sks */; };
+		3AD820682A1657ED00C61D58 /* GameScene_WatchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD820672A1657ED00C61D58 /* GameScene_WatchOS.swift */; };
+		3AD820692A165E3400C61D58 /* GameScene_WatchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD820672A1657ED00C61D58 /* GameScene_WatchOS.swift */; };
+		3AD8206A2A165E8F00C61D58 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5954B921D21F0F60088187E /* GameScene.swift */; };
+		3AD8206B2A1663B300C61D58 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3AD820652A16566A00C61D58 /* GameScene.sks */; };
 		F57E6CC81D3D4D8F00827D9A /* Splash.sks in Resources */ = {isa = PBXBuildFile; fileRef = F57E6CC61D3D4D8F00827D9A /* Splash.sks */; };
 		F58C07E01F747A1F00A5D3FB /* Fish Caught.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07D71F747A1D00A5D3FB /* Fish Caught.mp3 */; };
 		F58C07E11F747A1F00A5D3FB /* Zombie Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07D81F747A1D00A5D3FB /* Zombie Sound.mp3 */; };
@@ -100,6 +131,30 @@
 		F5954B981D21F0F60088187E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5954B961D21F0F60088187E /* Main.storyboard */; };
 		F5954B9D1D21F0F60088187E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5954B9B1D21F0F60088187E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AD820392A1651C700C61D58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5954B811D21F0F60088187E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AD820362A1651C700C61D58;
+			remoteInfo = "Zombie Piranhas watchOS Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3AD820472A1651C800C61D58 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				3AD820382A1651C700C61D58 /* Zombie Piranhas watchOS Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3A3921CD2A0937FA00A2E329 /* Zombie Piranhas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zombie Piranhas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +187,14 @@
 		3A86807429EEC395007AA0FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A86807629EEC395007AA0FC /* Zombie_Piranhas_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Zombie_Piranhas_macOS.entitlements; sourceTree = "<group>"; };
 		3ABC46142A0D0E9A0004B5E5 /* GameScene_GameControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene_GameControllers.swift; sourceTree = "<group>"; };
+		3AD820322A1651C700C61D58 /* Zombie Piranhas watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zombie Piranhas watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AD820372A1651C700C61D58 /* Zombie Piranhas watchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zombie Piranhas watchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AD8203C2A1651C700C61D58 /* Zombie_Piranhas_watchOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zombie_Piranhas_watchOSApp.swift; sourceTree = "<group>"; };
+		3AD8203E2A1651C700C61D58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3AD820402A1651C800C61D58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AD820432A1651C800C61D58 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3AD820652A16566A00C61D58 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		3AD820672A1657ED00C61D58 /* GameScene_WatchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene_WatchOS.swift; sourceTree = "<group>"; };
 		F57E6CC61D3D4D8F00827D9A /* Splash.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Splash.sks; sourceTree = "<group>"; };
 		F58C07D71F747A1D00A5D3FB /* Fish Caught.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Fish Caught.mp3"; sourceTree = "<group>"; };
 		F58C07D81F747A1D00A5D3FB /* Zombie Sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Zombie Sound.mp3"; sourceTree = "<group>"; };
@@ -162,6 +225,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3A86806229EEC395007AA0FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AD820342A1651C700C61D58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -225,6 +295,26 @@
 			path = "Zombie Piranhas macOS";
 			sourceTree = "<group>";
 		};
+		3AD8203B2A1651C700C61D58 /* Zombie Piranhas watchOS Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				3AD8203C2A1651C700C61D58 /* Zombie_Piranhas_watchOSApp.swift */,
+				3AD8203E2A1651C700C61D58 /* ContentView.swift */,
+				3AD820402A1651C800C61D58 /* Assets.xcassets */,
+				3AD820652A16566A00C61D58 /* GameScene.sks */,
+				3AD820422A1651C800C61D58 /* Preview Content */,
+			);
+			path = "Zombie Piranhas watchOS Watch App";
+			sourceTree = "<group>";
+		};
+		3AD820422A1651C800C61D58 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3AD820432A1651C800C61D58 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		F560C2481D2EB28D0066C872 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +337,7 @@
 				F5954B8B1D21F0F60088187E /* Zombie Piranhas */,
 				3A86806629EEC395007AA0FC /* Zombie Piranhas macOS */,
 				3A3921CE2A0937FA00A2E329 /* Zombie Piranhas tvOS */,
+				3AD8203B2A1651C700C61D58 /* Zombie Piranhas watchOS Watch App */,
 				F5954B8A1D21F0F60088187E /* Products */,
 			);
 			indentWidth = 2;
@@ -259,6 +350,8 @@
 				F5954B891D21F0F60088187E /* Zombie Piranhas.app */,
 				3A86806529EEC395007AA0FC /* Zombie Piranhas.app */,
 				3A3921CD2A0937FA00A2E329 /* Zombie Piranhas.app */,
+				3AD820322A1651C700C61D58 /* Zombie Piranhas watchOS.app */,
+				3AD820372A1651C700C61D58 /* Zombie Piranhas watchOS Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -272,6 +365,7 @@
 				F5954B8E1D21F0F60088187E /* GameScene.sks */,
 				F5954B921D21F0F60088187E /* GameScene.swift */,
 				3ABC46142A0D0E9A0004B5E5 /* GameScene_GameControllers.swift */,
+				3AD820672A1657ED00C61D58 /* GameScene_WatchOS.swift */,
 				F5954B941D21F0F60088187E /* GameViewController.swift */,
 				F57E6CC61D3D4D8F00827D9A /* Splash.sks */,
 				F560C2481D2EB28D0066C872 /* Audio */,
@@ -320,6 +414,40 @@
 			productReference = 3A86806529EEC395007AA0FC /* Zombie Piranhas.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3AD820312A1651C700C61D58 /* Zombie Piranhas watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AD8204B2A1651C800C61D58 /* Build configuration list for PBXNativeTarget "Zombie Piranhas watchOS" */;
+			buildPhases = (
+				3AD820302A1651C700C61D58 /* Resources */,
+				3AD820472A1651C800C61D58 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AD8203A2A1651C700C61D58 /* PBXTargetDependency */,
+			);
+			name = "Zombie Piranhas watchOS";
+			productName = "Zombie Piranhas watchOS";
+			productReference = 3AD820322A1651C700C61D58 /* Zombie Piranhas watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		3AD820362A1651C700C61D58 /* Zombie Piranhas watchOS Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AD8204A2A1651C800C61D58 /* Build configuration list for PBXNativeTarget "Zombie Piranhas watchOS Watch App" */;
+			buildPhases = (
+				3AD820332A1651C700C61D58 /* Sources */,
+				3AD820342A1651C700C61D58 /* Frameworks */,
+				3AD820352A1651C700C61D58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Zombie Piranhas watchOS Watch App";
+			productName = "Zombie Piranhas watchOS Watch App";
+			productReference = 3AD820372A1651C700C61D58 /* Zombie Piranhas watchOS Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F5954B881D21F0F60088187E /* Zombie Piranhas */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5954BA11D21F0F60088187E /* Build configuration list for PBXNativeTarget "Zombie Piranhas" */;
@@ -354,6 +482,12 @@
 					3A86806429EEC395007AA0FC = {
 						CreatedOnToolsVersion = 14.3;
 					};
+					3AD820312A1651C700C61D58 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					3AD820362A1651C700C61D58 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					F5954B881D21F0F60088187E = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 77DC4B8XN2;
@@ -378,6 +512,8 @@
 				F5954B881D21F0F60088187E /* Zombie Piranhas */,
 				3A86806429EEC395007AA0FC /* Zombie Piranhas macOS */,
 				3A3921CC2A0937FA00A2E329 /* Zombie Piranhas tvOS */,
+				3AD820312A1651C700C61D58 /* Zombie Piranhas watchOS */,
+				3AD820362A1651C700C61D58 /* Zombie Piranhas watchOS Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -426,11 +562,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AD820302A1651C700C61D58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AD820352A1651C700C61D58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AD820522A1655CD00C61D58 /* Yum Fish Sound.mp3 in Resources */,
+				3AD820572A1655CD00C61D58 /* Fish Off Sound.mp3 in Resources */,
+				3AD820582A1655CD00C61D58 /* Game Over Sound.mp3 in Resources */,
+				3AD820662A16566A00C61D58 /* GameScene.sks in Resources */,
+				3AD820442A1651C800C61D58 /* Preview Assets.xcassets in Resources */,
+				3AD820552A1655CD00C61D58 /* Zombie Sound.mp3 in Resources */,
+				3AD820532A1655CD00C61D58 /* Fish Caught.mp3 in Resources */,
+				3AD820542A1655CD00C61D58 /* Reel Tick Sound.mp3 in Resources */,
+				3AD8204E2A1655B500C61D58 /* Splash.sks in Resources */,
+				3AD820562A1655CD00C61D58 /* Reel Start Sound.mp3 in Resources */,
+				3AD820412A1651C800C61D58 /* Assets.xcassets in Resources */,
+				3AD820502A1655CD00C61D58 /* Fish Bash Sound.mp3 in Resources */,
+				3AD820512A1655CD00C61D58 /* Fishing Ambience Sound.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5954B871D21F0F60088187E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F58C07E81F747A1F00A5D3FB /* Yum Fish Sound.mp3 in Resources */,
+				3AD8206B2A1663B300C61D58 /* GameScene.sks in Resources */,
 				F58C07E21F747A1F00A5D3FB /* Game Over Sound.mp3 in Resources */,
 				F58C07E11F747A1F00A5D3FB /* Zombie Sound.mp3 in Resources */,
 				F5954B981D21F0F60088187E /* Main.storyboard in Resources */,
@@ -496,6 +660,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AD820332A1651C700C61D58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AD8206A2A165E8F00C61D58 /* GameScene.swift in Sources */,
+				3AD820612A1655DD00C61D58 /* Vector3.swift in Sources */,
+				3AD8203F2A1651C700C61D58 /* ContentView.swift in Sources */,
+				3AD820692A165E3400C61D58 /* GameScene_WatchOS.swift in Sources */,
+				3AD8205F2A1655DD00C61D58 /* CGVector+Extensions.swift in Sources */,
+				3AD8205D2A1655DD00C61D58 /* CGFloat+Extensions.swift in Sources */,
+				3AD820632A1655DD00C61D58 /* Int+Extensions.swift in Sources */,
+				3AD820622A1655DD00C61D58 /* SKNode+Extensions.swift in Sources */,
+				3AD8205E2A1655DD00C61D58 /* SKColor+Extensions.swift in Sources */,
+				3AD820592A1655DD00C61D58 /* SKTEffects.swift in Sources */,
+				3AD820642A1655DD00C61D58 /* SKAction+Extensions.swift in Sources */,
+				3AD820602A1655DD00C61D58 /* SKTTimingFunctions.swift in Sources */,
+				3AD8205B2A1655DD00C61D58 /* SKAction+SpecialEffects.swift in Sources */,
+				3AD8205C2A1655DD00C61D58 /* CGPoint+Extensions.swift in Sources */,
+				3AD8203D2A1651C700C61D58 /* Zombie_Piranhas_watchOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5954B851D21F0F60088187E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,6 +690,7 @@
 				3A86806029EEC2BC007AA0FC /* CGFloat+Extensions.swift in Sources */,
 				3ABC46152A0D0E9A0004B5E5 /* GameScene_GameControllers.swift in Sources */,
 				3A86805D29EEC2BC007AA0FC /* SKTEffects.swift in Sources */,
+				3AD820682A1657ED00C61D58 /* GameScene_WatchOS.swift in Sources */,
 				F5954B931D21F0F60088187E /* GameScene.swift in Sources */,
 				3A86805A29EEC2BC007AA0FC /* SKAction+SpecialEffects.swift in Sources */,
 				3A86805E29EEC2BC007AA0FC /* SKTAudio.swift in Sources */,
@@ -521,6 +708,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AD8203A2A1651C700C61D58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AD820362A1651C700C61D58 /* Zombie Piranhas watchOS Watch App */;
+			targetProxy = 3AD820392A1651C700C61D58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3A3921D92A0937FA00A2E329 /* Main.storyboard */ = {
@@ -722,6 +917,126 @@
 			};
 			name = Release;
 		};
+		3AD820452A1651C800C61D58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 77DC4B8XN2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_KEY_CFBundleDisplayName = "Zombie Piranhas watchOS";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msn.carper.theo.Zombie-Piranhas-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3AD820462A1651C800C61D58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77DC4B8XN2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_KEY_CFBundleDisplayName = "Zombie Piranhas watchOS";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msn.carper.theo.Zombie-Piranhas-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3AD820482A1651C800C61D58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"Zombie Piranhas watchOS Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 77DC4B8XN2;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Zombie Piranhas watchOS";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msn.carper.theo.Zombie-Piranhas-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		3AD820492A1651C800C61D58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Zombie Piranhas watchOS Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 77DC4B8XN2;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Zombie Piranhas watchOS";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msn.carper.theo.Zombie-Piranhas-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
 		F5954B9F1D21F0F60088187E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -842,7 +1157,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 77DC4B8XN2;
 				INFOPLIST_FILE = "Zombie Piranhas/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -860,7 +1175,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 77DC4B8XN2;
 				INFOPLIST_FILE = "Zombie Piranhas/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -889,6 +1204,24 @@
 			buildConfigurations = (
 				3A86807829EEC395007AA0FC /* Debug */,
 				3A86807929EEC395007AA0FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AD8204A2A1651C800C61D58 /* Build configuration list for PBXNativeTarget "Zombie Piranhas watchOS Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD820482A1651C800C61D58 /* Debug */,
+				3AD820492A1651C800C61D58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AD8204B2A1651C800C61D58 /* Build configuration list for PBXNativeTarget "Zombie Piranhas watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD820452A1651C800C61D58 /* Debug */,
+				3AD820462A1651C800C61D58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
