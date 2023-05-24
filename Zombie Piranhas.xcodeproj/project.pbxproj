@@ -12,7 +12,6 @@
 		3A3921DB2A0937FA00A2E329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3921D92A0937FA00A2E329 /* Main.storyboard */; };
 		3A3921DD2A0937FB00A2E329 /* Assets_tvos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3921DC2A0937FB00A2E329 /* Assets_tvos.xcassets */; };
 		3A3921E02A0937FB00A2E329 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3921DE2A0937FB00A2E329 /* LaunchScreen.storyboard */; };
-		3A3921E42A093EB500A2E329 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F5954B8E1D21F0F60088187E /* GameScene.sks */; };
 		3A3921E52A093EB500A2E329 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5954B921D21F0F60088187E /* GameScene.swift */; };
 		3A3921E62A093EB500A2E329 /* Splash.sks in Resources */ = {isa = PBXBuildFile; fileRef = F57E6CC61D3D4D8F00827D9A /* Splash.sks */; };
 		3A3921E72A093EBB00A2E329 /* Reel Tick Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07DE1F747A1F00A5D3FB /* Reel Tick Sound.mp3 */; };
@@ -53,7 +52,6 @@
 		3A86807229EEC395007AA0FC /* macOS.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A86807129EEC395007AA0FC /* macOS.xcassets */; };
 		3A86807529EEC395007AA0FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A86807329EEC395007AA0FC /* Main.storyboard */; };
 		3A86807A29EEC449007AA0FC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5954B921D21F0F60088187E /* GameScene.swift */; };
-		3A86807B29EEC449007AA0FC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F5954B8E1D21F0F60088187E /* GameScene.sks */; };
 		3A86807C29EEC487007AA0FC /* Zombie Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07D81F747A1D00A5D3FB /* Zombie Sound.mp3 */; };
 		3A86807D29EEC487007AA0FC /* Reel Tick Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07DE1F747A1F00A5D3FB /* Reel Tick Sound.mp3 */; };
 		3A86807E29EEC487007AA0FC /* Fish Bash Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07DC1F747A1E00A5D3FB /* Fish Bash Sound.mp3 */; };
@@ -110,10 +108,8 @@
 		3AD820632A1655DD00C61D58 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86804B29EEC2BC007AA0FC /* Int+Extensions.swift */; };
 		3AD820642A1655DD00C61D58 /* SKAction+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86804D29EEC2BC007AA0FC /* SKAction+Extensions.swift */; };
 		3AD820662A16566A00C61D58 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3AD820652A16566A00C61D58 /* GameScene.sks */; };
-		3AD820682A1657ED00C61D58 /* GameScene_WatchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD820672A1657ED00C61D58 /* GameScene_WatchOS.swift */; };
 		3AD820692A165E3400C61D58 /* GameScene_WatchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD820672A1657ED00C61D58 /* GameScene_WatchOS.swift */; };
 		3AD8206A2A165E8F00C61D58 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5954B921D21F0F60088187E /* GameScene.swift */; };
-		3AD8206B2A1663B300C61D58 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3AD820652A16566A00C61D58 /* GameScene.sks */; };
 		F57E6CC81D3D4D8F00827D9A /* Splash.sks in Resources */ = {isa = PBXBuildFile; fileRef = F57E6CC61D3D4D8F00827D9A /* Splash.sks */; };
 		F58C07E01F747A1F00A5D3FB /* Fish Caught.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07D71F747A1D00A5D3FB /* Fish Caught.mp3 */; };
 		F58C07E11F747A1F00A5D3FB /* Zombie Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58C07D81F747A1D00A5D3FB /* Zombie Sound.mp3 */; };
@@ -524,7 +520,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A3921EF2A093EBB00A2E329 /* Fish Off Sound.mp3 in Resources */,
-				3A3921E42A093EB500A2E329 /* GameScene.sks in Resources */,
 				3A3921EC2A093EBB00A2E329 /* Zombie Sound.mp3 in Resources */,
 				3A3921E92A093EBB00A2E329 /* Reel Start Sound.mp3 in Resources */,
 				3A3921FC2A093EE000A2E329 /* Assets.xcassets in Resources */,
@@ -551,7 +546,6 @@
 				3A86808029EEC487007AA0FC /* Fish Off Sound.mp3 in Resources */,
 				3AA2C83929EEDC4A00EFE36E /* Assets.xcassets in Resources */,
 				3A86807E29EEC487007AA0FC /* Fish Bash Sound.mp3 in Resources */,
-				3A86807B29EEC449007AA0FC /* GameScene.sks in Resources */,
 				3A86808529EEC48A007AA0FC /* Splash.sks in Resources */,
 				3A86807D29EEC487007AA0FC /* Reel Tick Sound.mp3 in Resources */,
 				3A86808129EEC487007AA0FC /* Fishing Ambience Sound.mp3 in Resources */,
@@ -594,7 +588,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F58C07E81F747A1F00A5D3FB /* Yum Fish Sound.mp3 in Resources */,
-				3AD8206B2A1663B300C61D58 /* GameScene.sks in Resources */,
 				F58C07E21F747A1F00A5D3FB /* Game Over Sound.mp3 in Resources */,
 				F58C07E11F747A1F00A5D3FB /* Zombie Sound.mp3 in Resources */,
 				F5954B981D21F0F60088187E /* Main.storyboard in Resources */,
@@ -690,7 +683,6 @@
 				3A86806029EEC2BC007AA0FC /* CGFloat+Extensions.swift in Sources */,
 				3ABC46152A0D0E9A0004B5E5 /* GameScene_GameControllers.swift in Sources */,
 				3A86805D29EEC2BC007AA0FC /* SKTEffects.swift in Sources */,
-				3AD820682A1657ED00C61D58 /* GameScene_WatchOS.swift in Sources */,
 				F5954B931D21F0F60088187E /* GameScene.swift in Sources */,
 				3A86805A29EEC2BC007AA0FC /* SKAction+SpecialEffects.swift in Sources */,
 				3A86805E29EEC2BC007AA0FC /* SKTAudio.swift in Sources */,

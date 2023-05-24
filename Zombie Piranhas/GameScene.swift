@@ -34,7 +34,9 @@ import GameController
 #endif
 #if os(watchOS)
 import WatchConnectivity
+import SwiftUI
 #endif
+
 
 #if os(macOS) || os(tvOS)
 protocol ReactToMotionEvents {
@@ -74,7 +76,7 @@ class GameScene: SKScene {
   var fishCaught: SKNode?
 
   var score: Int = 0
-  var lives: Int = 3
+  var lives: Int = 1
   // Labels
   var scoreLabel: SKLabelNode?
   var livesLabel: SKLabelNode?
@@ -116,6 +118,11 @@ class GameScene: SKScene {
     connectControllers()
     #endif
   }
+  #endif
+  
+  #if os(watchOS)
+  var hookDeltaPerFrame: CGFloat = 0
+  var reelDecelerateFactor: CGFloat = 0
   #endif
   
   func setupScene() {
@@ -193,9 +200,13 @@ class GameScene: SKScene {
     for _ in 0...10 {
       generateCloud(scatterX: true)
     }
-    
+    #if os(watchOS)
+    spawnFish(type: yumFish!, amount: 5)
+    spawnFish(type: piranha!, amount: 10)
+    #else
     spawnFish(type: yumFish!, amount: 10)
     spawnFish(type: piranha!, amount: 20)
+    #endif
     
     let backgroundAudio = SKAudioNode(fileNamed: "Fishing Ambience Sound")
     addChild(backgroundAudio)
@@ -603,8 +614,6 @@ class GameScene: SKScene {
   }
   #endif
   
-  
-  
   func handlePlayerAction(at location: CGPoint) {
     switch gameState {
     case .readyToCast:
@@ -719,6 +728,13 @@ class GameScene: SKScene {
         }
         startCastingDetection(motion)
       }
+    }
+    #endif
+    
+    // Digital crown
+    #if os(watchOS)
+    if reelDecelerateFactor > 0 {
+      updateReel()
     }
     #endif
   }
