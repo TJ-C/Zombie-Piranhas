@@ -52,9 +52,9 @@ struct ContentView: View {
           
     }
     .ignoresSafeArea()
-    .onDisappear() {
-      watchGameScene.motionManager.stopAccelerometerUpdates()
-    }
+//    .onDisappear() {
+//      watchGameScene.motionManager.stopAccelerometerUpdates()
+//    }
     
   }
   

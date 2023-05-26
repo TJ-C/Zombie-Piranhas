@@ -296,6 +296,7 @@
 			children = (
 				3AD8203C2A1651C700C61D58 /* Zombie_Piranhas_watchOSApp.swift */,
 				3AD8203E2A1651C700C61D58 /* ContentView.swift */,
+				3AD820672A1657ED00C61D58 /* GameScene_WatchOS.swift */,
 				3AD820402A1651C800C61D58 /* Assets.xcassets */,
 				3AD820652A16566A00C61D58 /* GameScene.sks */,
 				3AD820422A1651C800C61D58 /* Preview Content */,
@@ -361,7 +362,6 @@
 				F5954B8E1D21F0F60088187E /* GameScene.sks */,
 				F5954B921D21F0F60088187E /* GameScene.swift */,
 				3ABC46142A0D0E9A0004B5E5 /* GameScene_GameControllers.swift */,
-				3AD820672A1657ED00C61D58 /* GameScene_WatchOS.swift */,
 				F5954B941D21F0F60088187E /* GameViewController.swift */,
 				F57E6CC61D3D4D8F00827D9A /* Splash.sks */,
 				F560C2481D2EB28D0066C872 /* Audio */,

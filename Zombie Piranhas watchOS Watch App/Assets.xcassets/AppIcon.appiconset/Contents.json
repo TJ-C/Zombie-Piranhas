@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "ZP_Icon_watchOS_App_Store.png",
       "idiom" : "universal",
       "platform" : "watchos",
       "size" : "1024x1024"

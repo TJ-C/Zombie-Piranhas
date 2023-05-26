@@ -22,7 +22,7 @@ extension GameScene {
   /// HowTo - Notifications: https://www.appypie.com/notification-center-how-to-swift
   func setupTouchObserver() {
     NotificationCenter.default.addObserver(self, selector:#selector(didTap(_:)), name: .didTapScreen, object: nil)
-    NotificationCenter.default.addObserver(self, selector: #selector(sceneDidLoad), name: .reload, object: nil)
+//    NotificationCenter.default.addObserver(self, selector: #selector(reload), name: .reload, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(didSwipe), name: .didSwipeUp, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(reelTurn(_:)), name: .didTurnDigitalCrown, object: nil)
   }

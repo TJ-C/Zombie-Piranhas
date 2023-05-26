@@ -33,8 +33,8 @@ import SpriteKit
 import GameController
 #endif
 #if os(watchOS)
-import WatchConnectivity
 import SwiftUI
+import WatchKit
 #endif
 
 
@@ -223,12 +223,16 @@ class GameScene: SKScene {
       let hookDepth = CGFloat(7000)
       #elseif os(watchOS)
       let hookDepth = CGFloat(1350)
+      WKInterfaceDevice.current().play(.start)
       #endif
       let hookVelocity = Double(hookDepth / 500)
       
       castAndReel(depth: hookDepth, speed: hookVelocity, completion: {
         self.gameState = .fishing
         self.fishingTimer = CFAbsoluteTimeGetCurrent()
+        #if os(watchOS)
+        WKInterfaceDevice.current().play(.stop)
+        #endif
       })
     }
   }
@@ -241,6 +245,10 @@ class GameScene: SKScene {
         line?.removeAllActions()
         gameState = .fishing
         fishingTimer = CFAbsoluteTimeGetCurrent()
+        #if os(watchOS)
+        reelDecelerateFactor = 0
+        WKInterfaceDevice.current().play(.stop)
+        #endif
       }
     }
   }
@@ -500,6 +508,9 @@ class GameScene: SKScene {
     } else {
       updateStatus(text: "Ready.", color: SKColor.blue)
       gameState = .readyToCast
+      #if os(watchOS)
+      WKInterfaceDevice.current().play(.retry)
+      #endif
     }
   }
   
